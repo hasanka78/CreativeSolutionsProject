@@ -148,10 +148,17 @@
                         <span class="input-group-addon">
                               <i class="text-muted glyphicon glyphicon-calendar"></i>
                         </span>
-                        <input ng-model="vm.appointmentData.date" type="text" id="date" name="date"
+                                                <input type="text"
+                               class="form-control date"
+                               id="dateFrom"
                                placeholder="MM/DD/YYY"
-                               class="form-control"
-                               >
+                               ng-click="vm.dateFrom=true"
+                               datepicker-popup="{{vm.format}}"
+                               ng-model="vm.dtFrom"
+                               is-open="vm.dateFrom"
+                               datepicker-options="vm.dateOptions"
+                               ng-required="true"
+                               close-text="Close" >
                     </div>
                     <div class="help-block" ng-messages="userForm.date.$error"
                          ng-if="userForm.$submitted">
