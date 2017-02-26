@@ -1,13 +1,13 @@
 (function () {
     angular
-        .module('qmaticBank.bankAgent')
-        .controller('AgentCtrl', AgentCtrl);
+    .module('qmaticBank.bankAgent')
+    .controller('AgentCtrl', AgentCtrl);
 
     function AgentCtrl(AgentService) {
         var vm = this;
         vm.formSubmit = formSubmit;
-		vm.reset = reset;
-		vm.resete = resete;
+        vm.reset = reset;
+        vm.resete = resete;
         vm.agentData = AgentService.getAgentData();
         vm.appointmentData = {
             username: '',
@@ -17,11 +17,11 @@
             comment: '',
             isUrgent: ''
         };
-		vm.originalAppoinmentData = {} ;
-		
-       
-		 
-    function resetToDefault(form) {
+        vm.originalAppoinmentData = {} ;
+        
+        
+        
+        function resetToDefault(form) {
             form.$setPristine();
             form.$setUntouched();
             vm.appointmentData = {
@@ -39,12 +39,12 @@
             vm.showTheForm = false;
         }
 
-       function resete(form) {
+        function resete(form) {
             resetToDefault(form)
             vm.showTheForm = true;
         }
-       
-       function formSubmit(isValid, form) {
+        
+        function formSubmit(isValid, form) {
             if (isValid) {
                 vm.showTheForm = false;
                 AgentService.submitCustomerData(vm.appointmentData);
@@ -55,7 +55,7 @@
 
             }
         }
-	
+        
     }
 
 })();

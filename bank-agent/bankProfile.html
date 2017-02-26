@@ -1,214 +1,207 @@
 <div>
 
+<div class="row">
 
-    <div class="row">
 
-        <div class="col-sm-4">
-<div class="profile-sidebar">
-        <!-- SIDEBAR USERPIC -->
-        <div class="profile-userpic">
-          <img src="assets/images/profile_pic.jpg" class="img-responsive" alt="">
+
+  <!-- START LEFT CONTAINER -->
+  <div class="col-sm-4">
+
+    <div class="profile-sidebar">
+
+      <div class="profile-userpic">
+        <img src="assets/images/profile_pic.jpg" class="img-responsive" alt="">
+      </div>
+
+      <div class="profile-usertitle">
+        <div class="profile-usertitle-name">
+          {{vm.agentData.name}} : {{vm.agentData.age}} Yrs
         </div>
-        <!-- END SIDEBAR USERPIC -->
-        <!-- SIDEBAR USER TITLE -->
-        <div class="profile-usertitle">
-          <div class="profile-usertitle-name">
-            {{vm.agentData.name}} : {{vm.agentData.age}} Yrs
-          </div>
-          <div class="profile-usertitle-job">
-            {{vm.agentData.role}}
-          </div>
+        <div class="profile-usertitle-job">
+          {{vm.agentData.role}}
         </div>
-        <!-- END SIDEBAR USER TITLE -->
+      </div>
 
-                <div class="profile-social">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher"
-                       href="https://plus.google.com">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher"
-                       href="https://plus.google.com">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://linkedin.com">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </div>
+      <div class="profile-social">
+        <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a class="btn btn-danger btn-sm" rel="publisher"
+          href="https://plus.google.com">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a class="btn btn-primary btn-sm" rel="publisher"
+          href="https://plus.google.com">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a class="btn btn-warning btn-sm" rel="publisher" href="https://linkedin.com">
+          <i class="fa fa-linkedin"></i>
+        </a>
+      </div>
 
-        <!-- SIDEBAR BUTTONS -->
-        <div class="profile-userbuttons">
-          <button type="button" class="btn btn-primary"  ng-click="vm.resete(userForm)">Ask for an appointment</button>
-        </div>
-        <!-- END SIDEBAR BUTTONS -->
-        <!-- SIDEBAR MENU -->
-        <div class="profile-usermenu">
-          <ul class="nav">
-            <li>
-              <a>
+      <div class="profile-userbuttons">
+        <button type="button" class="btn btn-primary"  ng-click="vm.resete(userForm)">Ask for an appointment</button>
+      </div>
+
+      <div class="profile-usermenu">
+        <ul class="nav">
+          <li>
+            <a>
               <i class="glyphicon glyphicon-home"></i>
               Experience : {{vm.agentData.experience}} years </a>
-            </li>
-            <li>
-              <a>
+          </li>
+          <li>
+            <a>
               <i class="glyphicon glyphicon-user"></i>
               Current Branch : {{vm.agentData.branch}} </a>
-            </li>
-            <li>
-              <a>
+          </li>
+          <li>
+            <a>
               <i class="glyphicon glyphicon-ok"></i>
               Specialized In : {{vm.agentData.specializedIn}} </a>
-            </li>
-          </ul>
-        </div>
-        <!-- END MENU -->
+          </li>
+        </ul>
       </div>
-        </div>
 
-
-        <div id="rightContainer" class="col-sm-8">
-<div id="user-desc">
-<p >{{vm.agentData.description}} </p>
-<br/>
-<b>Qualifications : </b>
-                       <ul >
-                            <li ng-repeat="qualification in vm.agentData.qualifications">
-                                {{ qualification }}
-                            </li>
-                        </ul>
-
-</div>
-
-            <!-- user form -->
-            <form class="col-sm-9" name="userForm" id="userForm" ng-show="vm.showTheForm" novalidate autocomplete="off">
-                
-				<div class="form-group"
-                     ng-class="{ 'has-error': userForm.username.$invalid && userForm.$submitted }">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                              <i class="text-muted glyphicon glyphicon-user"></i>
-                        </span>
-                        <input ng-model="vm.appointmentData.username" type="text" id="username" name="username"
-                               placeholder="Your Name"
-                               class="form-control"
-                               ng-maxlength="30"
-                               required>
-                    </div>
-                    <div class="help-block" ng-messages="userForm.username.$error"
-                         ng-if="userForm.$submitted">
-                        <div ng-messages-include="utility/error-list.html"></div>
-                    </div>
-                </div>
-				
-				
-				<div class="form-group"
-                     ng-class="{ 'has-error': userForm.contact.$invalid && userForm.$submitted }">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                              <i class="text-muted glyphicon glyphicon-phone"></i>
-                        </span>
-                        <input ng-model="vm.appointmentData.contact" type="number" id="contact" name="contact"
-                               placeholder="Contact No."
-                               class="form-control"
-                               ng-maxlength="10"
-                               ng-minlength="9"
-                               required>
-                    </div>
-                    <div class="help-block" ng-messages="userForm.contact.$error"
-                         ng-if="userForm.$submitted">
-                        <div ng-messages-include="utility/error-list.html"></div>
-                    </div>
-                </div>
-				
-               
-				<div class="form-group"
-                     ng-class="{ 'has-error': userForm.email.$invalid && userForm.$submitted }">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                              <i class="text-muted 	glyphicon glyphicon-envelope"></i>
-                        </span>
-                        <input ng-model="vm.appointmentData.email" type="email" id="email" name="email"
-                               placeholder="Email"
-                               class="form-control"
-                               >
-                    </div>
-                    <div class="help-block" ng-messages="userForm.email.$error"
-                         ng-if="userForm.$submitted">
-                        <div ng-messages-include="utility/error-list.html"></div>
-                    </div>
-                </div>
-				
-				
-					<div class="form-group"
-                     ng-class="{ 'has-error': userForm.date.$invalid && userForm.$submitted }">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                              <i class="text-muted glyphicon glyphicon-calendar"></i>
-                        </span>
-                                                <input type="text"
-                               class="form-control date"
-                               id="dateFrom"
-                               placeholder="MM/DD/YYY"
-                               ng-click="vm.dateFrom=true"
-                               datepicker-popup="{{vm.format}}"
-                               ng-model="vm.appointmentData.date"
-                               is-open="vm.dateFrom"
-                               datepicker-options="vm.dateOptions"
-                               ng-required="true"
-                               close-text="Close" >
-                    </div>
-                    <div class="help-block" ng-messages="userForm.date.$error"
-                         ng-if="userForm.$submitted">
-                        <div ng-messages-include="utility/error-list.html"></div>
-                    </div>
-                </div>
-				
-			   <div class="form-group"
-                     ng-class="{ 'has-error': userForm.comment.$invalid && userForm.$submitted }">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                              <i class="text-muted 	glyphicon glyphicon-bullhorn"></i>
-                        </span>
-                        <textarea ng-model="vm.appointmentData.details"  id="comment" name="comment" rows=5
-                               placeholder="Details.."
-                               class="form-control"
-                               ></textarea>
-                    </div>
-                    <div class="help-block" ng-messages="userForm.comment.$error"
-                         ng-if="userForm.$submitted">
-                        <div ng-messages-include="utility/error-list.html"></div>
-                    </div>
-                </div>
-				
-				
-	
-				
-				<div class="form-group"
-                
-                    	<div class="checkbox">
-  <label><input type="checkbox" ng-model="vm.appointmentData.isUrgent" >This is urgent!</label>
-</div>
-                
-				
-
-  
-
-  
-				
-				
-				
-                <button type="submit" class="btn btn-primary" ng-click="vm.formSubmit(userForm.$valid,userForm)" >Submit
-                </button>
-                <!-- <button type="reset" class="btn btn-primary">Reset</button> -->
-                <button type="button" class="btn btn-primary" ng-click="vm.reset(userForm)" >No Thanks!</button>
-            </form>
-
-
-        </div>
-		
     </div>
-	
+
+  </div>
+  <!-- END LEFT CONTAINER -->
+
+
+
+  <!-- START RIGHT CONTAINER -->
+  <div id="rightContainer" class="col-sm-8">
+
+
+    <div id="user-desc">
+      <p >{{vm.agentData.description}} </p>
+      <br/>
+      <b>Qualifications : </b>
+      <ul >
+        <li ng-repeat="qualification in vm.agentData.qualifications">
+          {{ qualification }}
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- user form -->
+    <form class="col-sm-9" name="userForm" id="userForm" ng-show="vm.showTheForm" novalidate autocomplete="off">
+              
+      <div class="form-group"
+      ng-class="{ 'has-error': userForm.username.$invalid && userForm.$submitted }">
+        <div class="input-group">
+          <span class="input-group-addon">
+              <i class="text-muted glyphicon glyphicon-user"></i>
+          </span>
+          <input ng-model="vm.appointmentData.username" type="text" id="username" name="username"
+            placeholder="Your Name"
+            class="form-control"
+            ng-maxlength="30"
+            required>
+        </div>
+        <div class="help-block" ng-messages="userForm.username.$error"
+        ng-if="userForm.$submitted">
+        <div ng-messages-include="utility/error-list.html"></div>
+        </div>
+      </div>  
+          
+      <div class="form-group"
+      ng-class="{ 'has-error': userForm.contact.$invalid && userForm.$submitted }">
+        <div class="input-group">
+            <span class="input-group-addon">
+              <i class="text-muted glyphicon glyphicon-phone"></i>
+            </span>
+            <input ng-model="vm.appointmentData.contact" type="number" id="contact" name="contact"
+            placeholder="Contact No."
+            class="form-control"
+            ng-maxlength="10"
+            ng-minlength="9"
+            required>
+        </div>
+        <div class="help-block" ng-messages="userForm.contact.$error"
+        ng-if="userForm.$submitted">
+        <div ng-messages-include="utility/error-list.html"></div>
+        </div>
+      </div>
+      
+      <div class="form-group"
+      ng-class="{ 'has-error': userForm.email.$invalid && userForm.$submitted }">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="text-muted 	glyphicon glyphicon-envelope"></i>
+          </span>
+          <input ng-model="vm.appointmentData.email" type="email" id="email" name="email"
+          placeholder="Email"
+          class="form-control"
+          >
+        </div>
+        <div class="help-block" ng-messages="userForm.email.$error"
+        ng-if="userForm.$submitted">
+        <div ng-messages-include="utility/error-list.html"></div>
+        </div>
+      </div>
+
+      <div class="form-group"
+      ng-class="{ 'has-error': userForm.date.$invalid && userForm.$submitted }">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="text-muted glyphicon glyphicon-calendar"></i>
+          </span>
+          <input type="text"
+          class="form-control date"
+          id="dateFrom"
+          placeholder="MM/DD/YYY"
+          ng-click="vm.dateFrom=true"
+          datepicker-popup="{{vm.format}}"
+          ng-model="vm.appointmentData.date"
+          is-open="vm.dateFrom"
+          datepicker-options="vm.dateOptions"
+          ng-required="true"
+          close-text="Close" >
+        </div>
+        <div class="help-block" ng-messages="userForm.date.$error"
+        ng-if="userForm.$submitted">
+        <div ng-messages-include="utility/error-list.html"></div>
+        </div>
+      </div>
+
+      <div class="form-group"
+      ng-class="{ 'has-error': userForm.comment.$invalid && userForm.$submitted }">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="text-muted 	glyphicon glyphicon-bullhorn"></i>
+          </span>
+          <textarea ng-model="vm.appointmentData.details"  id="comment" name="comment" rows=5
+          placeholder="Details.."
+          class="form-control"
+          ></textarea>
+        </div>
+        <div class="help-block" ng-messages="userForm.comment.$error"
+        ng-if="userForm.$submitted">
+        <div ng-messages-include="utility/error-list.html"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox">
+          <label><input type="checkbox" ng-model="vm.appointmentData.isUrgent" >This is urgent!</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" ng-click="vm.formSubmit(userForm.$valid,userForm)" >Submit
+      </button>
+      <!-- <button type="reset" class="btn btn-primary">Reset</button> -->
+      <button type="button" class="btn btn-primary" ng-click="vm.reset(userForm)" >No Thanks!</button>
+
+    </form>
+
+  </div>
+  <!-- END RIGHT CONTAINER -->
+
+
+
+</div>
 
 </div>

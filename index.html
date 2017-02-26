@@ -1,128 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Bank app</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <title>Bank app</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
   <link rel="stylesheet" type="text/css" href="assets/css/profile_bar.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <script src="lib/angular.min.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
-    <script src="qmatic-bank/qmaticBank.app.js"></script>
-    <script src="lib/angular-messages.min.js"></script>
-    <script src="bank-agent/bankAgent.module.js"></script>
-    <script src="bank-agent/bankAgent.service.js"></script>
-    <script src="bank-agent/bankAgent.controller.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+  <script src="qmatic-bank/qmaticBank.app.js"></script>
+  <script src="lib/angular-messages.min.js"></script>
+  <script src="bank-agent/bankAgent.module.js"></script>
+  <script src="bank-agent/bankAgent.service.js"></script>
+  <script src="bank-agent/bankAgent.controller.js"></script>
 
 </head>
+
 <body>
-<div class="container" ng-app="qmaticBank">
+
+  <div class="container" ng-app="qmaticBank">
+  
+
+    <!--START NAV BAR-->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- <a class="navbar-brand" href="#">Parker Bank International</a> -->
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a  ui-sref="bankProfile">Home</a></li>
-                    <li><a ui-sref="aboutUs">About</a></li>
-                    <li><a ui-sref="contactUs">Contact</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Parker Bank International</a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a  ui-sref="bankProfile">Home</a></li>
+            <li><a ui-sref="aboutUs">About</a></li>
+            <li><a ui-sref="contactUs">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </nav>
+    <!--END NAV BAR-->
 
-        <header class="jumbotron row">
-          <img src="assets/images/parker.png"/>
+
+    <!--START JUMBOTRON-->
+    <header class="jumbotron row">
+        <img src="assets/images/parker.png"/>
     </header>
+    <!--END JAMBOTRON-->
 
+
+    <!--START MAIN CONTENT-->
     <ui-view>
-
     </ui-view>
-</div>
+    <!--END MAIN CONTENT-->
 
 
-<!--footer start from here-->
-<footer class="container">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-6 footerleft ">
-        <div class="logofooter"> Parker Bank International</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <p><i class="fa fa-map-marker"></i> 210, Charlotte, North Carolina, United States</p>
-        <p><i class="fa fa-phone"></i> Phone (United States) : +00 1 315-724-4022</p>
-        <p><i class="fa fa-envelope"></i> E-mail : info@parkerbank.com</p>
-        
-      </div>
-      <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">Personal Banking</h6>
-        <ul class="footer-ul">
-          <li><a href="#"> Credit Cards</a></li>
-          <li><a href="#"> Savings Accounts</a></li>
-          <li><a href="#"> Loans</a></li>
-          <li><a href="#"> Term Deposits</a></li>
-          <li><a href="#"> Remittances</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">Corporate Banking</h6>
-        <ul class="footer-ul">
-          <li><a href="#">Corporate Credit</a></li>
-          <li><a href="#"> Credit Cards</a></li>
-          <li><a href="#"> Commercial Credit</a></li>
-          <li><a href="#"> Corporate Finance</a></li>
-          <li><a href="#"> Development Banking</a></li>
-          <li><a href="#"> FCBU</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">Quick Links</h6>
-        <ul class="footer-ul">
-          <li><a href="#"> New Customer Registrations</a></li>
-          <li><a href="#"> Preliminery Loan Evaluation</a></li>
-          <li><a href="#"> Loan Application</a></li>
-          <li><a href="#"> Banking Tips</a></li>
-          <li><a href="#"> Online Interest / Exchange Rates</a></li>
-          <li><a href="#"> Financial Calculators</a></li>
-          <li><a href="#"> Product Finder</a></li>
-        </ul>
-      </div>   
-      <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">Connect With Us</h6>
-        <ul class="footer-ul">
-          <li><a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x social"></i> Facebook</a></li>
-          <li><a href="https://twitter.com"><i class="fa fa-twitter-square fa-2x social"></i> Twitter</a></li>
-          <li> <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-2x social"></i> Google Plus</a></li>
-          <li><a href="mailto:info@parkerbank.com"><i class="fa fa-envelope-square fa-2x social"></i> Email</a></li>
-        </ul>
-      </div>          
+  </div>
+
+
+  <!--START FOOTER-->
+  <footer class="container">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 footerleft ">
+          <div class="logofooter"> Parker Bank International</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p><i class="fa fa-map-marker"></i> 210, Charlotte, North Carolina, United States</p>
+          <p><i class="fa fa-phone"></i> Phone (United States) : +00 1 315-724-4022</p>
+          <p><i class="fa fa-envelope"></i> E-mail : info@parkerbank.com</p>
+          
+        </div>
+        <div class="col-md-2 col-sm-6 paddingtop-bottom">
+          <h6 class="heading7">Personal Banking</h6>
+          <ul class="footer-ul">
+            <li><a href="#"> Credit Cards</a></li>
+            <li><a href="#"> Savings Accounts</a></li>
+            <li><a href="#"> Loans</a></li>
+            <li><a href="#"> Term Deposits</a></li>
+            <li><a href="#"> Remittances</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 paddingtop-bottom">
+          <h6 class="heading7">Corporate Banking</h6>
+          <ul class="footer-ul">
+            <li><a href="#">Corporate Credit</a></li>
+            <li><a href="#"> Credit Cards</a></li>
+            <li><a href="#"> Commercial Credit</a></li>
+            <li><a href="#"> Corporate Finance</a></li>
+            <li><a href="#"> Development Banking</a></li>
+            <li><a href="#"> FCBU</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 paddingtop-bottom">
+          <h6 class="heading7">Quick Links</h6>
+          <ul class="footer-ul">
+            <li><a href="#"> New Customer Registrations</a></li>
+            <li><a href="#"> Preliminery Loan Evaluation</a></li>
+            <li><a href="#"> Loan Application</a></li>
+            <li><a href="#"> Banking Tips</a></li>
+            <li><a href="#"> Online Interest / Exchange Rates</a></li>
+            <li><a href="#"> Financial Calculators</a></li>
+            <li><a href="#"> Product Finder</a></li>
+          </ul>
+        </div>   
+        <div class="col-md-2 col-sm-6 paddingtop-bottom">
+          <h6 class="heading7">Connect With Us</h6>
+          <ul class="footer-ul">
+            <li><a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x social"></i> Facebook</a></li>
+            <li><a href="https://twitter.com"><i class="fa fa-twitter-square fa-2x social"></i> Twitter</a></li>
+            <li> <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-2x social"></i> Google Plus</a></li>
+            <li><a href="mailto:info@parkerbank.com"><i class="fa fa-envelope-square fa-2x social"></i> Email</a></li>
+          </ul>
+        </div>          
 
       </div>
     </div>
-  </div>
 
-  <div class="copyright">
-  <div class="container">
-    <div class="col-md-6">
-      <p>© 2016 - All Rights with Hasanka Sapumal</p>
+    <div class="copyright">
+      <div class="container">
+        <div class="col-md-6">
+          <p>© 2016 - All Rights with Hasanka Sapumal</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-</footer>
-<!--footer start from here-->
+  </footer>
+  <!--END FOOTER-->
 
 
 </body>
