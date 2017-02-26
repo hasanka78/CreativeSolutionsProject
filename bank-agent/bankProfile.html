@@ -40,7 +40,7 @@
       </div>
 
       <div class="profile-userbuttons">
-        <button type="button" class="btn btn-primary"  ng-click="vm.resete(userForm)">Ask for an appointment</button>
+        <button type="button" class="btn btn-primary btn-bg"  ng-click="vm.resete(userForm)">Ask for an appointment</button>
       </div>
 
       <div class="profile-usermenu">
@@ -158,7 +158,7 @@
           ng-model="vm.appointmentData.date"
           is-open="vm.dateFrom"
           datepicker-options="vm.dateOptions"
-          ng-required="true"
+          ng-required="false"
           close-text="Close" >
         </div>
         <div class="help-block" ng-messages="userForm.date.$error"
