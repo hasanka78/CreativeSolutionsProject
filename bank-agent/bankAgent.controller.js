@@ -19,32 +19,42 @@
         };
 		vm.originalAppoinmentData = {} ;
 		
-        function formSubmit(isValid) {
+       
+		 
+    function resetToDefault(form) {
+            form.$setPristine();
+            form.$setUntouched();
+            vm.appointmentData = {
+                username: '',
+                contact: '',
+                email: '',
+                date: '',
+                comment: '',
+                isUrgent: ''
+            };
+        }
+
+        function reset(form) {
+            resetToDefault(form);
+            vm.showTheForm = false;
+        }
+
+       function resete(form) {
+            resetToDefault(form)
+            vm.showTheForm = true;
+        }
+       
+       function formSubmit(isValid, form) {
             if (isValid) {
                 vm.showTheForm = false;
                 AgentService.submitCustomerData(vm.appointmentData);
-				
+                resetToDefault(form);
             } else {
-				vm.showTheForm = true;
+                vm.showTheForm = true;
                 console.log('Form is not valid');
-				
+
             }
-			 
-            
-			
         }
-		
-		 function reset() {
-			 console.log('inside reset');
-        vm.appointmentData = angular.copy(vm.originalAppoinmentData);
-		vm.showTheForm = false;
-    }
-		 function resete() {
-			 console.log('inside reseteeeee');
-        vm.appointmentData = angular.copy(vm.originalAppoinmentData);
-		vm.showTheForm = true;
-    }
-	
 	
     }
 
