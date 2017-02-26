@@ -1,0 +1,68 @@
+
+/* about-us page */
+#aboutUs{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#aboutUs h3 {
+    border-bottom: 1px solid #D5D5D5;
+    margin: 30px 0 15px;
+    padding-bottom: 15px;
+}
+
+#aboutUs h1, #aboutUs h2, #aboutUs h3, #aboutUs h4, #aboutUs h5 {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+
+
+/* input type - number : removing drop down */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+
+
+/* jumbotron */
+.jumbotron{
+    padding-top: 0;
+    padding-bottom: 0; 
+    margin-left: 0px; 
+    margin-right: 0px;
+}
+header img{
+    width:100%;
+}
+
+
+
+
+#user-desc{
+    font-family: cursive;
+    font-size: medium;
+}
+
+
+
+
+#userForm{
+    padding-top: 20px;
+}
+
+
+
+#contactUsContainer{
+    margin-right: 0px
+}
+
+
+
+#rightContainer{
+    padding-top: 20px;
+}

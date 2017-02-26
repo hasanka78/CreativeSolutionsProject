@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/profile_bar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="lib/angular.min.js"></script>
@@ -17,151 +19,6 @@
     <script src="bank-agent/bankAgent.service.js"></script>
     <script src="bank-agent/bankAgent.controller.js"></script>
 
-<style type="text/css">
-    
-/* Profile container */
-.profile {
-  margin: 20px 0;
-}
-
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #eee;
-}
-
-.profile-userpic img {
-  float: none;
-  margin: 0 auto;
-  width: 50%;
-  height: 50%;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
-}
-
-.profile-usertitle {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.profile-usertitle-name {
-  color: #5a7391;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 7px;
-}
-
-.profile-usertitle-job {
-  text-transform: uppercase;
-  color: #5b9bd1;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.profile-userbuttons {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.profile-userbuttons .btn {
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 6px 15px;
-  margin-right: 5px;
-}
-
-.profile-userbuttons .btn:last-child {
-  margin-right: 0px;
-}
-    
-.profile-usermenu {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7;
-}
-
-.profile-usermenu ul li:last-child {
-  border-bottom: none;
-}
-
-.profile-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.profile-usermenu ul li a i {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
-}
-
-.profile-usermenu ul li.active {
-  border-bottom: none;
-}
-
-.profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
-  margin-left: -2px;
-}
-
-/* Profile Content */
-.profile-content {
-  padding: 20px;
-  background: #fff;
-  min-height: 460px;
-}
-
-.profile-social {
-    padding: 0 20px;
-    margin-bottom: 17px;
-    text-align: center;
-}
-
-.profile-social .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
-
-
-
-
-#aboutUs{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#aboutUs h3 {
-    border-bottom: 1px solid #D5D5D5;
-    margin: 30px 0 15px;
-    padding-bottom: 15px;
-}
-
-#aboutUs h1, #aboutUs h2, #aboutUs h3, #aboutUs h4, #aboutUs h5 {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-
-
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
-}
-
-</style>
 </head>
 <body>
 <div class="container" ng-app="qmaticBank">
@@ -187,8 +44,8 @@ input[type=number]::-webkit-outer-spin-button {
         </div><!--/.container-fluid -->
     </nav>
 
-        <header class="jumbotron row" style="padding-top: 0;padding-bottom: 0; margin-left: 0px; margin-right: 0px;">
-          <img src="parker.png" style="width:100%"/>
+        <header class="jumbotron row">
+          <img src="assets/images/parker.png"/>
     </header>
 
     <ui-view>
@@ -245,10 +102,10 @@ input[type=number]::-webkit-outer-spin-button {
       <div class="col-md-2 col-sm-6 paddingtop-bottom">
         <h6 class="heading7">Connect With Us</h6>
         <ul class="footer-ul">
-          <li><a href="https://www.facebook.com/bootsnipp"><i class="fa fa-facebook-square fa-2x social"></i> Facebook</a></li>
-          <li><a href="https://twitter.com/bootsnipp"><i class="fa fa-twitter-square fa-2x social"></i> Twitter</a></li>
-          <li> <a href="https://plus.google.com/+Bootsnipp-page"><i class="fa fa-google-plus-square fa-2x social"></i> Google Plus</a></li>
-          <li><a href="mailto:bootsnipp@gmail.com"><i class="fa fa-envelope-square fa-2x social"></i> Email</a></li>
+          <li><a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x social"></i> Facebook</a></li>
+          <li><a href="https://twitter.com"><i class="fa fa-twitter-square fa-2x social"></i> Twitter</a></li>
+          <li> <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-2x social"></i> Google Plus</a></li>
+          <li><a href="mailto:info@parkerbank.com"><i class="fa fa-envelope-square fa-2x social"></i> Email</a></li>
         </ul>
       </div>          
 
