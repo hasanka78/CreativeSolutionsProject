@@ -1,27 +1,84 @@
 <div>
-    <header class="jumbotron">
-          <img src="parker.png" style="width:100%"/>
-          <p>Bankers for the nation!</p>
-    </header>
+
 
     <div class="row">
 
         <div class="col-sm-3">
-            <div class="thumbnail">
-                <img src="avatar.jpg" alt="Lights" style="width:100%">
-                <div class="caption">
-                    <h3>About Me</h3>
-                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                    <p><a href="#" class="btn btn-primary">Share</a> <a href="#"
-                                                                        class="btn btn-default">Download</a>
-                    </p>
+<div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img src="https://s-media-cache-ak0.pinimg.com/736x/3b/3f/2a/3b3f2afb5788fd349e70c9d5deef3841.jpg" class="img-responsive" alt="">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            Jane Doe : 35 Yrs
+          </div>
+          <div class="profile-usertitle-job">
+            Senior Banker
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+
+                <div class="profile-social">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/+ahmshahnuralam">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-behance"></i>
+                    </a>
                 </div>
 
-            </div>
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-primary"  ng-click="vm.resete()">Ask for an appointment</button>
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+              <i class="glyphicon glyphicon-home"></i>
+              Overview </a>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-user"></i>
+              Account Settings </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+              <i class="glyphicon glyphicon-ok"></i>
+              Tasks </a>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-flag"></i>
+              Help </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
         </div>
 
 
-        <div class="col-sm-9">
+        <div class="col-sm-9" style="padding-top: 20px;">
+
+<p style="    font-family: cursive;
+    font-size: larger;
+    text-align: right;">
+Jane Doe is Google Adwords certified and has over 7 years of specializing in SEO, SEM, Conversion Optimization, & increasing ROI. He has worked as a team leader on major Profit 100 website re-development projects and handles much of the tactical execution of campaigns. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <form class="form-horizontal" name="agentForm">
                 <div class="form-group">
@@ -106,7 +163,7 @@
                         <span class="input-group-addon">
                               <i class="text-muted 	glyphicon glyphicon-envelope"></i>
                         </span>
-                        <input ng-model="vm.appointmentData.username" type="email" id="email" name="email"
+                        <input ng-model="vm.appointmentData.email" type="email" id="email" name="email"
                                placeholder="Email"
                                class="form-control"
                                >
@@ -180,11 +237,5 @@
 		
     </div>
 	
-    <footer>
-        <div class="jumbotron">
-            <p>If you enjoyed this article, please contribute to Rob's rock star aspirations by purchasing one of
-                Rob's
-                cover or original songs from.</p>
-        </div>
-    </footer>
+
 </div>

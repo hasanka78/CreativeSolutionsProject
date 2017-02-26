@@ -11,6 +11,7 @@
      * @param $stateProvider
      * @param $urlRouterProvider
      */
+	 
     function configuration($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/bankProfile');
@@ -26,7 +27,14 @@
         $stateProvider
             .state('aboutUs', {
                 url: '/aboutUs',
-                templateUrl: 'about-us/aboutUs.html'
+                templateUrl: 'pages/aboutUs.html'
             });
+
+        $stateProvider
+            .state('contactUs', {
+                url: '/contactUs',
+                templateUrl: 'pages/contactUs.html'
+            });
+
     }
 })();
