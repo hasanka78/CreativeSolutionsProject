@@ -25,7 +25,7 @@
 
     function getAgentData() {
         var agentData = {
-            Name: "Hasanka Sapumal",
+            Name: "Jane Doe",
             Age: 28,
             experiences: ["Software Engineer", "FullStack Developer", "DevOP"]
         };

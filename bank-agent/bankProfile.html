@@ -13,7 +13,7 @@
         <!-- SIDEBAR USER TITLE -->
         <div class="profile-usertitle">
           <div class="profile-usertitle-name">
-            Jane Doe : 35 Yrs
+            {{vm.agentData.Name}} : {{vm.agentData.Age}} Yrs
           </div>
           <div class="profile-usertitle-job">
             Senior Banker
@@ -101,16 +101,6 @@ Jane Doe is Google Adwords certified and has over 7 years of specializing in SEO
                                 {{ experience }}
                             </li>
                         </ul>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2"></label>
-                    <div class="col-sm-10">
-                        <button type="button" class="btn btn-primary" ng-click="vm.resete()">
-                            Ask
-                            for an
-                            appointment now!
-                        </button>
                     </div>
                 </div>
             </form>
