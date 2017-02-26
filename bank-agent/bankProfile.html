@@ -1,0 +1,190 @@
+<div>
+    <header class="jumbotron">
+          <img src="parker.png" style="width:100%"/>
+          <p>Bankers for the nation!</p>
+    </header>
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <img src="avatar.jpg" alt="Lights" style="width:100%">
+                <div class="caption">
+                    <h3>About Me</h3>
+                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                    <p><a href="#" class="btn btn-primary">Share</a> <a href="#"
+                                                                        class="btn btn-default">Download</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-sm-9">
+
+            <form class="form-horizontal" name="agentForm">
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Name:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static"> {{vm.agentData.Name}} </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Age:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">{{vm.agentData.Age}}</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Experience:</label>
+                    <div class="col-sm-10">
+                        <ul class="form-control-static">
+                            <li ng-repeat="experience in vm.agentData.experiences">
+                                {{ experience }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2"></label>
+                    <div class="col-sm-10">
+                        <button type="button" class="btn btn-primary" ng-click="vm.resete()">
+                            Ask
+                            for an
+                            appointment now!
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+
+            <!-- user form -->
+            <form name="userForm" ng-show="vm.showTheForm" novalidate autocomplete="off">
+                
+				<div class="form-group"
+                     ng-class="{ 'has-error': userForm.username.$invalid && userForm.$submitted }">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                              <i class="text-muted glyphicon glyphicon-user"></i>
+                        </span>
+                        <input ng-model="vm.appointmentData.username" type="text" id="username" name="username"
+                               placeholder="Username"
+                               class="form-control"
+                               ng-maxlength="30"
+                               required>
+                    </div>
+                    <div class="help-block" ng-messages="userForm.username.$error"
+                         ng-if="userForm.$submitted">
+                        <div ng-messages-include="utility/error-list.html"></div>
+                    </div>
+                </div>
+				
+				
+				<div class="form-group"
+                     ng-class="{ 'has-error': userForm.contact.$invalid && userForm.$submitted }">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                              <i class="text-muted glyphicon glyphicon-phone"></i>
+                        </span>
+                        <input ng-model="vm.appointmentData.contact" type="text" id="contact" name="contact"
+                               placeholder="Contact No."
+                               class="form-control"
+                               ng-maxlength="10"
+                               required>
+                    </div>
+                    <div class="help-block" ng-messages="userForm.contact.$error"
+                         ng-if="userForm.$submitted">
+                        <div ng-messages-include="utility/error-list.html"></div>
+                    </div>
+                </div>
+				
+               
+				<div class="form-group"
+                     ng-class="{ 'has-error': userForm.email.$invalid && userForm.$submitted }">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                              <i class="text-muted 	glyphicon glyphicon-envelope"></i>
+                        </span>
+                        <input ng-model="vm.appointmentData.username" type="email" id="email" name="email"
+                               placeholder="Email"
+                               class="form-control"
+                               >
+                    </div>
+                    <div class="help-block" ng-messages="userForm.email.$error"
+                         ng-if="userForm.$submitted">
+                        <div ng-messages-include="utility/error-list.html"></div>
+                    </div>
+                </div>
+				
+				
+					<div class="form-group"
+                     ng-class="{ 'has-error': userForm.date.$invalid && userForm.$submitted }">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                              <i class="text-muted glyphicon glyphicon-calendar"></i>
+                        </span>
+                        <input ng-model="vm.appointmentData.date" type="text" id="date" name="date"
+                               placeholder="MM/DD/YYY"
+                               class="form-control"
+                               >
+                    </div>
+                    <div class="help-block" ng-messages="userForm.date.$error"
+                         ng-if="userForm.$submitted">
+                        <div ng-messages-include="utility/error-list.html"></div>
+                    </div>
+                </div>
+				
+			   <div class="form-group"
+                     ng-class="{ 'has-error': userForm.comment.$invalid && userForm.$submitted }">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                              <i class="text-muted 	glyphicon glyphicon-bullhorn"></i>
+                        </span>
+                        <textarea ng-model="vm.appointmentData.details"  id="comment" name="comment"
+                               placeholder="Details.."
+                               class="form-control"
+                               ></textarea>
+                    </div>
+                    <div class="help-block" ng-messages="userForm.comment.$error"
+                         ng-if="userForm.$submitted">
+                        <div ng-messages-include="utility/error-list.html"></div>
+                    </div>
+                </div>
+				
+				
+	
+				
+				<div class="form-group"
+                
+                    	<div class="checkbox">
+  <label><input type="checkbox" ng-model="vm.appointmentData.isUrgent" >This is urgent!</label>
+</div>
+                
+				
+
+  
+
+  
+				
+				
+				
+                <button type="submit" class="btn btn-primary" ng-click="vm.formSubmit(userForm.$valid)" >Submit
+                </button>
+                <!-- <button type="reset" class="btn btn-primary">Reset</button> -->
+                <button type="button" class="btn btn-primary" ng-click="vm.reset()" >No Thanks!</button>
+            </form>
+
+
+        </div>
+		
+    </div>
+	
+    <footer>
+        <div class="jumbotron">
+            <p>If you enjoyed this article, please contribute to Rob's rock star aspirations by purchasing one of
+                Rob's
+                cover or original songs from.</p>
+        </div>
+    </footer>
+</div>
