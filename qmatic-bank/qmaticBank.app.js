@@ -6,13 +6,7 @@
     .module('qmaticBank')
     .config(configuration);
 
-    /**
-     *
-     * @param $stateProvider
-     * @param $urlRouterProvider
-     */
-     
-     function configuration($stateProvider, $urlRouterProvider) {
+    function configuration($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/bankProfile');
 
