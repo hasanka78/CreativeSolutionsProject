@@ -7,7 +7,7 @@
         var vm = this;
         vm.formSubmit = formSubmit;
         vm.reset = reset;
-        vm.resete = resete;
+        vm.showForm = showForm;
         vm.agentData = AgentService.getAgentData();
         vm.appointmentData = {
             username: '',
@@ -19,7 +19,17 @@
         };
         vm.originalAppoinmentData = {} ;
         
-        
+        function formSubmit(isValid, form) {
+            if (isValid) {
+                vm.showTheForm = false;
+                AgentService.submitCustomerData(vm.appointmentData);
+                resetToDefault(form);
+            } else {
+                vm.showTheForm = true;
+                console.log('Form is not valid');
+
+            }
+        }
         
         function resetToDefault(form) {
             form.$setPristine();
@@ -39,22 +49,11 @@
             vm.showTheForm = false;
         }
 
-        function resete(form) {
+        function showForm(form) {
             resetToDefault(form)
             vm.showTheForm = true;
         }
         
-        function formSubmit(isValid, form) {
-            if (isValid) {
-                vm.showTheForm = false;
-                AgentService.submitCustomerData(vm.appointmentData);
-                resetToDefault(form);
-            } else {
-                vm.showTheForm = true;
-                console.log('Form is not valid');
-
-            }
-        }
         
     }
 
